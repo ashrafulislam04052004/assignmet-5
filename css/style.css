@@ -1,0 +1,92 @@
+body{
+    margin:50px;
+    font-family: Arial, sans-serif;
+    background:#f2f2f2;
+}
+
+/* center container */
+
+.login-container{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+/* card */
+
+.login-card{
+    background:white;
+    padding:40px;
+    width:350px;
+    border-radius:12px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.1);
+    text-align:center;
+}
+
+.logo{
+    width:70px;
+    margin-bottom:10px;
+}
+
+.subtitle{
+    color:gray;
+    font-size:14px;
+    margin-bottom:20px;
+}
+
+/* input */
+
+form{
+    text-align:left;
+}
+
+label{
+    font-weight:bold;
+}
+
+input{
+    width:100%;
+    padding:10px;
+    margin-top:5px;
+    margin-bottom:5px;
+    border-radius:6px;
+    border:1px solid #ddd;
+}
+
+/* default text */
+
+.default{
+    color:blue;
+    font-size:12px;
+}
+
+/* button */
+
+button{
+    width:100%;
+    padding:12px;
+    margin-top:15px;
+    border:none;
+    border-radius:8px;
+    background:linear-gradient(90deg,#4a00ff,#6a00ff);
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+}
+
+/* divider */
+
+.divider{
+    margin:20px 0;
+    color:gray;
+}
+
+/* demo */
+
+.demo{
+    background:#f6f6f6;
+    padding:15px;
+    border-radius:8px;
+    font-size:14px;
+}

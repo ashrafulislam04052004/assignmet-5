@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>GitHub Issues Tracker</title>
+<link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+<!-- Navbar -->
+
+<nav class="navbar">
+
+<div class="logo-area">
+<img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png">
+<h2>GitHub Issues Tracker</h2>
+</div>
+
+<div class="search-area">
+
+<input type="text" id="searchInput" placeholder="Search issues...">
+<button onclick="searchIssues()">Search</button>
+
+</div>
+
+</nav>
+
+<!-- Tabs -->
+
+<div class="tabs">
+
+<button id="allBtn" class="active" onclick="setActive('allBtn'); loadIssues()">All</button>
+<button id="openBtn" onclick="setActive('openBtn'); filterIssues('open')">Open</button>
+<button id="closedBtn" onclick="setActive('closedBtn'); filterIssues('closed')">Closed</button>
+
+</div>
+
+<!-- Issue Info -->
+
+<div class="issue-info">
+
+<div>
+<h3 id="issueCount">0 Issues</h3>
+<p>Track and manage your project issues</p>
+</div>
+
+<div>
+<span class="open-dot"></span> Open
+<span class="closed-dot"></span> Closed
+</div>
+
+</div>
+
+<!-- Loading -->
+
+<div id="loading">Loading...</div>
+
+<!-- Cards -->
+
+<div id="issuesContainer"></div>
+
+
+<!-- Modal -->
+
+<div id="modal" class="modal">
+
+<div class="modal-content">
+
+<span onclick="closeModal()" class="close">&times;</span>
+
+<div id="modalBody"></div>
+
+</div>
+
+</div>
+
+<script src="js/main.js"></script>
+
+</body>
+</html>
