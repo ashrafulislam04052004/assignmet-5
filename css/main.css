@@ -301,6 +301,32 @@ background:#e6f0ff;
 color:#6b7280;
 }
 
+.labels{
+display:flex;
+gap:10px;
+margin-top:10px;
+}
+
+/* BUG label */
+
+.bug{
+border:1px solid red;
+color:red;
+padding:3px 10px;
+border-radius:20px;
+font-size:12px;
+}
+
+/* HELP WANTED label */
+
+.help{
+border:1px solid orange;
+color:orange;
+padding:3px 10px;
+border-radius:20px;
+font-size:12px;
+}
+
 
 
 
