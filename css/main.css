@@ -1,5 +1,14 @@
-/* NAVBAR */
 
+body{
+    margin-left: 150px;
+    margin-right: 150px;
+    margin-top:70px;
+       margin-bottom:100px;
+}
+
+
+
+/* NAVBAR */
 .navbar{
 display:flex;
 justify-content:space-between;
@@ -147,6 +156,87 @@ float:right;
 font-size:22px;
 cursor:pointer;
 }
+
+/* CARD HEADER */
+
+.card-header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:10px;
+}
+
+.status-icon{
+width:18px;
+height:18px;
+border:3px dashed #00b894;
+border-radius:50%;
+}
+
+/* PRIORITY */
+
+.priority{
+background:#f3dede;
+color:#ff3b3b;
+padding:5px 12px;
+border-radius:20px;
+font-size:12px;
+font-weight:bold;
+}
+
+/* TITLE */
+
+.title{
+font-size:18px;
+margin:10px 0;
+}
+
+/* DESCRIPTION */
+
+.desc{
+color:#6b7280;
+font-size:14px;
+}
+
+/* LABELS */
+
+.labels{
+margin-top:10px;
+display:flex;
+gap:10px;
+}
+
+.bug{
+border:1px solid #ff6b6b;
+color:#ff6b6b;
+padding:4px 10px;
+border-radius:20px;
+font-size:12px;
+}
+
+.help{
+border:1px solid orange;
+color:orange;
+padding:4px 10px;
+border-radius:20px;
+font-size:12px;
+}
+
+/* FOOTER */
+
+.card-footer{
+margin-top:15px;
+padding-top:10px;
+border-top:1px solid #eee;
+font-size:13px;
+color:#777;
+display:flex;
+justify-content:space-between;
+}
+
+
+
+
 
 /* RESPONSIVE */
 

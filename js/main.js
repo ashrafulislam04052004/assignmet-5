@@ -11,7 +11,9 @@ let data = await res.json()
 
 allIssues = data.data
 
-displayIssues(allIssues)
+let filtered = allIssues.slice(0,20)
+
+displayIssues(filtered)
 
 document.getElementById("issueCount").innerText = allIssues.length + " Issues"
 
@@ -40,14 +42,26 @@ card.classList.add("closed")
 }
 
 card.innerHTML = `
-<h3>${issue.title}</h3>
-<p>${issue.description}</p>
-<p><b>Status:</b> ${issue.status}</p>
-<p><b>Category:</b> ${issue.category}</p>
-<p><b>Author:</b> ${issue.author}</p>
-<p><b>Priority:</b> ${issue.priority}</p>
-<p><b>Label:</b> ${issue.label}</p>
-<p>${issue.createdAt}</p>
+
+<div class="card-header">
+    <span class="status-icon"></span>
+    <span class="priority">${issue.priority}</span>
+</div>
+
+<h3 class="title">${issue.title}</h3>
+
+<p class="desc">${issue.description}</p>
+
+<div class="labels">
+    <span class="bug">${issue.category}</span>
+    <span class="help">${issue.label}</span>
+</div>
+
+<div class="card-footer">
+    <span>#${issue.id} by ${issue.author}</span>
+    <span>${issue.createdAt}</span>
+</div>
+
 `
 
 card.onclick = () => openModal(issue.id)
