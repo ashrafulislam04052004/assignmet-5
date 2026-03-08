@@ -45,7 +45,7 @@ card.innerHTML = `
 
 <div class="card-header">
     <span class="status-icon"></span>
-    <span class="priority">${issue.priority}</span>
+   <span class="priority ${issue.priority.toLowerCase()}">${issue.priority}</span>
 </div>
 
 <h3 class="title">${issue.title}</h3>
@@ -77,6 +77,9 @@ function filterIssues(status){
 let filtered = allIssues.filter(issue => issue.status === status)
 
 displayIssues(filtered)
+
+document.getElementById("issueCount").innerText =
+filtered.length + " " + status + " Issues"
 
 }
 
