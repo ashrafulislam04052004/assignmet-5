@@ -1,49 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+ <head>
 <meta charset="UTF-8">
 <title>GitHub Issues Tracker</title>
 <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
-
 <div class="login-container">
-
     <div class="login-card">
 
-        <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" class="logo">
-
+    <img src="assets/github-logo.png" class="logo">
         <h2>GitHub Issues Tracker</h2>
         <p class="subtitle">Sign in to manage your issues</p>
-
         <form id="loginForm">
-
             <label>Username</label>
             <input type="text" id="username" placeholder="Enter Username" required>
-            <small class="default">Default: admin</small>
-
-            <label>Password</label>
-            <input type="password" id="password" placeholder="Enter Password" required>
-            <small class="default">Default: admin123</small>
-
+            <small class="default"> Default: admin</small> <br> <br>
+            <label> Password</label>
+            <input type="password" id="password" placeholder="Enter password" required>
+            <small class="default"> Default: admin123</small>
             <button type="submit">Sign In</button>
-
-        </form>
-
-        <div class="divider">OR</div>
-
+           </form>
+    
+        <div class="divider">Or</div>
         <div class="demo">
-            <p><b>Demo Credentials:</b></p>
+           
+            <p> <b>Demo Credentials</b></p>
             <p>Username: admin</p>
+            <br>
             <p>Password: admin123</p>
-        </div>
-
     </div>
-
+    </div>
 </div>
 
 <script src="js/login.js"></script>
-
 </body>
 </html>

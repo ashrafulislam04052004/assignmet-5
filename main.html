@@ -2,68 +2,63 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>GitHub Issues Tracker</title>
+<title>GitHub Issues Tracker </title>
 <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
 
-<!-- Navbar -->
+ <!-- Navbar -->
 
-<nav class="navbar">
-
-<div class="logo-area">
-<img src="assets/github-logo.png">
+<nav class="navbar"> 
+<div class=" logo-area">
+<img src="assets/github-logo.png" alt="">
 <h2>GitHub Issues Tracker</h2>
-</div>
+</div> 
+
 
 <div class="search-area">
-
 <input type="text" id="searchInput" placeholder="Search issues...">
 <button onclick="searchIssues()">Search</button>
-
 </div>
-
 </nav>
 
-<!-- Tabs -->
+ <!-- Tabs -->
 
 <div class="tabs">
 
-<button id="allBtn" class="active" onclick="setActive('allBtn'); loadIssues()">All</button>
+<button id="allBtn" class=" active" onclick="setActive('allBtn'); loadIssues()">All</button>
 <button id="openBtn" onclick="setActive('openBtn'); filterIssues('open')">Open</button>
 <button id="closedBtn" onclick="setActive('closedBtn'); filterIssues('closed')">Closed</button>
 
 </div>
 
-<!-- Issue Info -->
+ <!-- Issue Info -->
 
 <div class="issue-info">
 
 <div class="issue-left">
-
 <img src="assets/Aperture.png" class="issue-icon">
 
 <div>
-<h3 id="issueCount">0 Issues</h3>
-<p>Track and manage your project issues</p>
+    <h3 id="issueCount"> 50 Issues</h3>
+    <p>Track and manage Your project issues</p>
 </div>
-
 </div>
 
 <div class="issue-right">
 
 <span onclick="filterIssues('open')">
 <span class="open-dot"></span> Open
-</span>
+<span class="open-dot"></span>Open </span>
 
 <span onclick="filterIssues('closed')">
 <span class="closed-dot"></span> Closed
-</span>
-
+<span class="closed-dot"> </span> Closed </span>
 </div>
 
 </div>
+
 
 <!-- Loading -->
 
