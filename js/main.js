@@ -44,8 +44,10 @@ card.classList.add("closed")
 card.innerHTML = `
 
 <div class="card-header">
-    <span class="status-icon"></span>
-   <span class="priority ${issue.priority.toLowerCase()}">${issue.priority}</span>
+<span class="status-icon"></span>
+<span class="priority ${issue.priority.toLowerCase()}">
+${issue.priority}
+</span>
 </div>
 
 <h3 class="title">${issue.title}</h3>
@@ -53,21 +55,21 @@ card.innerHTML = `
 <p class="desc">${issue.description}</p>
 
 <div class="labels">
-    <span class="bug">${issue.category}</span>
-    <span class="help">${issue.label}</span>
+<span class="bug"> ${issue.category ? issue.category : "BUG"}</span>
+<span class="help"> ${issue.label ? issue.label : "HELP WANTED"}</span>
 </div>
 
 <div class="card-footer">
-    <span>#${issue.id} by ${issue.author}</span>
-    <span>${issue.createdAt}</span>
+<span>#${issue.id} by ${issue.author}</span>
+<span>${new Date(issue.createdAt).toLocaleDateString()}</span>
 </div>
 
 `
 
+
 card.onclick = () => openModal(issue.id)
 
 container.appendChild(card)
-
 })
 
 }
@@ -93,14 +95,38 @@ let issue = data.data
 document.getElementById("modal").style.display = "block"
 
 document.getElementById("modalBody").innerHTML = `
-<h2>${issue.title}</h2>
-<p>${issue.description}</p>
-<p>Status: ${issue.status}</p>
-<p>Category: ${issue.category}</p>
-<p>Author: ${issue.author}</p>
-<p>Priority: ${issue.priority}</p>
-<p>Label: ${issue.label}</p>
-<p>${issue.createdAt}</p>
+
+<h2 class="modal-title">${issue.title}</h2>
+
+<div class="modal-meta">
+<span class="status ${issue.status}">${issue.status}</span>
+<span>Opened by ${issue.author}</span>
+<span>${issue.createdAt}</span>
+</div>
+
+<div class="modal-labels">
+<span class="bug">${issue.category}</span>
+<span class="help">${issue.label}</span>
+</div>
+
+<p class="modal-desc">${issue.description}</p>
+
+<div class="modal-bottom">
+
+<div>
+<p>Assignee:</p>
+<b>${issue.author}</b>
+</div>
+
+<div>
+<p>Priority:</p>
+<span class="priority ${issue.priority.toLowerCase()}">${issue.priority}</span>
+</div>
+
+</div>
+
+<button class="close-btn" onclick="closeModal()">Close</button>
+
 `
 
 }
@@ -113,7 +139,7 @@ async function searchIssues(){
 
 let text = document.getElementById("searchInput").value
 
-let res = await fetch(`https://phi-lab-server.vercel.app/api/v1/lab/issues/search?q=${text}`)
+let res = await fetch(`https://phi-lab-server.vercel.app/api/v1/lab/issues/search?q=notifications`)
 let data = await res.json()
 
 displayIssues(data.data)

@@ -328,6 +328,135 @@ font-size:12px;
 }
 
 
+.modal-content{
+background:white;
+width:600px;
+padding:30px;
+margin:120px auto;
+border-radius:12px;
+position:relative;
+}
+
+.modal-title{
+font-size:24px;
+font-weight:bold;
+margin-bottom:10px;
+}
+
+.modal-meta{
+display:flex;
+gap:15px;
+font-size:14px;
+color:#6b7280;
+margin-bottom:10px;
+}
+
+.status{
+background:#e6f7ed;
+color:green;
+padding:4px 10px;
+border-radius:20px;
+font-size:12px;
+}
+
+.modal-labels{
+display:flex;
+gap:10px;
+margin-bottom:15px;
+}
+
+.modal-desc{
+color:#6b7280;
+margin-bottom:20px;
+}
+
+.modal-bottom{
+display:flex;
+justify-content:space-between;
+background:#f3f4f6;
+padding:15px;
+border-radius:8px;
+margin-bottom:20px;
+}
+
+.close-btn{
+background:#5a00ff;
+color:white;
+border:none;
+padding:10px 20px;
+border-radius:8px;
+cursor:pointer;
+float:right;
+}
+
+/* PRIORITY BUTTON */
+
+.priority{
+padding:6px 16px;
+border-radius:20px;
+font-size:12px;
+font-weight:bold;
+}
+
+/* HIGH */
+
+.priority.high{
+background:#ffe5e5;
+color:#ff3b3b;
+}
+
+/* MEDIUM */
+
+.priority.medium{
+background:#fff4d6;
+color:#f59e0b;
+}
+
+/* LOW */
+
+.priority.low{
+background:#e6f0ff;
+color:#3b82f6;
+}
+
+.bug{
+background:#ffe5e5;
+color:#ff3b3b;
+padding:5px 12px;
+border-radius:20px;
+font-size:12px;
+font-weight:bold;
+}
+
+/* HELP WANTED LABEL */
+
+.help{
+background:#fff4d6;
+color:#f59e0b;
+padding:5px 12px;
+border-radius:20px;
+font-size:12px;
+font-weight:bold;
+}
+
+.bug{
+background:#ffe5e5;
+color:#ff3b3b;
+padding:5px 12px;
+border-radius:20px;
+font-size:12px;
+font-weight:600;
+}
+
+.help{
+background:#fff4d6;
+color:#f59e0b;
+padding:5px 12px;
+border-radius:20px;
+font-size:12px;
+font-weight:600;
+}
+
 
 
 
