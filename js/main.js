@@ -2,7 +2,7 @@
 const api = "https://phi-lab-server.vercel.app/api/v1/lab/issues";
 let allIssues = [];
 
-// লোড ইস্যু
+
 async function loadIssues() {
     showLoading(true);
     let res = await fetch(api);
@@ -13,7 +13,6 @@ async function loadIssues() {
 }
 loadIssues();
 
-// কার্ড প্রদর্শন
 function displayIssues(issues) {
     let container = document.getElementById("issuesContainer");
     container.innerHTML = "";
@@ -40,7 +39,7 @@ function displayIssues(issues) {
     });
 }
 
-// মডাল খোলা
+
 async function openModal(id) {
     let res = await fetch(`https://phi-lab-server.vercel.app/api/v1/lab/issue/${id}`);
     let issue = (await res.json()).data;
@@ -65,12 +64,50 @@ async function openModal(id) {
         <button class="close-btn" onclick="closeModal()">Close</button>`;
 }
 
-// মডাল বন্ধ
+
 function closeModal() {
     document.getElementById("modal").style.display = "none";
 }
 
-// লোডিং দেখানো/লুকানো
+
 function showLoading(show) {
     document.getElementById("loading").style.display = show ? "block" : "none";
+}
+
+// Filter Issues
+function filterIssues(status){
+
+let filtered = allIssues.filter(issue => issue.status === status);
+
+displayIssues(filtered);
+
+document.getElementById("issueCount").innerText =
+filtered.length + " " + status + " Issues";
+
+}
+
+
+// Search Issues
+async function searchIssues(){
+
+let text = document.getElementById("searchInput").value;
+
+let res = await fetch(`https://phi-lab-server.vercel.app/api/v1/lab/issues/search?q=${text}`);
+
+let data = await res.json();
+
+displayIssues(data.data);
+
+}
+
+
+// Active Button
+function setActive(buttonId){
+
+document.getElementById("allBtn").classList.remove("active");
+document.getElementById("openBtn").classList.remove("active");
+document.getElementById("closedBtn").classList.remove("active");
+
+document.getElementById(buttonId).classList.add("active");
+
 }
